@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amantle's Coffee Corner - Contact</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <header class="header">
+            <h1>Amantle's Coffee Corner</h1>
+            <p class="tagline">Where Every Cup Tells a Story</p>
+        </header>
+
+        <main class="content">
+            <h2 class="page-title">Contact Us</h2>
+
+            <div class="contact-info">
+                <h3>Get In Touch</h3>
+                <p>We would love to hear from you! Whether you have a question, feedback, or just want to say hi, feel free to reach out.</p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <span class="contact-label">Location:</span>
+                        <span class="contact-value">Phase 2, Gaborone, Botswana</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Phone:</span>
+                        <span class="contact-value">71859357</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">Email:</span>
+                        <span class="contact-value">lesley@amantlescoffee.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">WhatsApp:</span>
+                        <span class="contact-value">+267 71859357</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map-section">
+                <h3>Find Us Here</h3>
+                <div class="map-placeholder">
+                    <p>Location</p>
+                    <p>Phase 2, Gaborone</p>
+                </div>
+            </div>
+
+            <!-- contact form -->
+            <div class="contact-form-section">
+                <h3>Send Us a Message</h3>
+                <form class="contact-form" onsubmit="submitForm(event)">
+                    <div class="form-group">
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Your Phone:</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message:</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+                <p id="form-message" class="form-message"></p>
+            </div>
+
+           
+        </main>
+
+        <nav class="bottom-nav">
+            <button class="nav-btn" onclick="goToPage('index.html')">Home</button>
+            <button class="nav-btn" onclick="goToPage('menu.html')">Menu</button>
+            <button class="nav-btn" onclick="goToPage('about.html')">About</button>
+            <button class="nav-btn" onclick="goToPage('gallery.html')">Gallery</button>
+            <button class="nav-btn active" onclick="goToPage('contact.html')">Contact</button>
+        </nav>
+
+        <footer class="footer">
+            <p>Amantle's Coffee Corner | Phase 2, Gaborone | Call: 71859357</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

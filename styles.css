@@ -1,0 +1,678 @@
+/* styles.css */
+/* This is my CSS file for Amantle's Coffee Corner */
+/* I am learning web development so please be nice! */
+
+/* first I will do the body styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #FDF5E6;
+    color: #4A3728;
+    min-height: 100vh;
+}
+
+/* background images for different pages */
+body.menu-page {
+    background-image: url('https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=1920&q=80');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+body.gallery-page {
+    background-image: url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1920&q=80');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+body.about-page {
+    background-image: url('https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=1920&q=80');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* overlay for pages with background images */
+body.menu-page::before,
+body.gallery-page::before,
+body.about-page::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(253, 245, 230, 0.92);
+    z-index: -1;
+}
+
+/* the main container that holds everything */
+.main-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-bottom: 180px;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* header styles */
+.header {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #8B4513;
+    color: #FFF8DC;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+}
+
+.tagline {
+    margin: 10px 0 0 0;
+    font-style: italic;
+    font-size: 1.1em;
+    color: #DEB887;
+}
+
+/* main content area */
+.content {
+    background-color: #FFF8DC;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid #D2B48C;
+}
+
+/* page titles */
+.page-title {
+    text-align: center;
+    color: #8B4513;
+    font-size: 1.8em;
+    border-bottom: 3px solid #CD853F;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+/* welcome box on home page */
+.welcome-box {
+    background-color: #FAEBD7;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    border-left: 5px solid #8B4513;
+}
+
+.welcome-box h2 {
+    color: #8B4513;
+    margin-top: 0;
+}
+
+.welcome-box p {
+    line-height: 1.7;
+    font-size: 1.05em;
+}
+
+/* feature section on home page */
+.feature-box {
+    background-color: #D2B48C;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.feature-box h3 {
+    text-align: center;
+    color: #4A3728;
+    margin-top: 0;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.feature-item {
+    background-color: #FFF8DC;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.feature-item h4 {
+    margin: 10px 0;
+    color: #8B4513;
+}
+
+.feature-item p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* hours box */
+.hours-box {
+    background-color: #8B4513;
+    color: #FFF8DC;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.hours-box h3 {
+    margin-top: 0;
+    color: #DEB887;
+}
+
+.hours-box p {
+    margin: 8px 0;
+    font-size: 1.05em;
+}
+
+/* menu page styles */
+.menu-section {
+    background-color: #FAEBD7;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.menu-section h3 {
+    color: #8B4513;
+    border-bottom: 2px dashed #CD853F;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 15px;
+    background-color: #FFF8DC;
+    border-radius: 8px;
+    border: 1px solid #D2B48C;
+    transition: transform 0.2s;
+}
+
+.menu-item:hover {
+    transform: translateX(5px);
+    background-color: #FFF;
+}
+
+.item-name {
+    font-weight: bold;
+    color: #4A3728;
+}
+
+.item-price {
+    color: #8B4513;
+    font-weight: bold;
+    background-color: #D2B48C;
+    padding: 3px 10px;
+    border-radius: 15px;
+}
+
+.menu-note {
+    text-align: center;
+    padding: 15px;
+    background-color: #DEB887;
+    border-radius: 10px;
+    font-style: italic;
+}
+
+.menu-note p {
+    margin: 5px 0;
+}
+
+/* this makes the menu item vertical so we can put image on top */
+.menu-item-with-image {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* the image container */
+.menu-item-image {
+    height: 120px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+/* the text part under the image */
+.menu-item-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+/* styling the name inside the card */
+.menu-item-with-image .item-name {
+    font-size: 1em;
+}
+
+/* styling the price inside the card */
+.menu-item-with-image .item-price {
+    font-size: 0.9em;
+}
+
+/* about page styles */
+.about-story, .about-mission, .about-values {
+    background-color: #FAEBD7;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.about-story h3, .about-mission h3, .about-values h3 {
+    color: #8B4513;
+    margin-top: 0;
+}
+
+.about-story p, .about-mission p {
+    line-height: 1.7;
+}
+
+.values-list {
+    line-height: 2;
+}
+
+.values-list li {
+    margin-bottom: 10px;
+}
+
+.team-section {
+    background-color: #D2B48C;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.team-section h3 {
+    text-align: center;
+    margin-top: 0;
+    color: #4A3728;
+}
+
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.team-member {
+    background-color: #FFF8DC;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 140px;
+}
+
+.member-avatar {
+    width: 60px;
+    height: 60px;
+    background-color: #8B4513;
+    color: #FFF8DC;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px auto;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.team-member h4 {
+    margin: 10px 0 5px 0;
+    color: #8B4513;
+}
+
+.team-member p {
+    margin: 0;
+    font-size: 0.85em;
+    color: #666;
+}
+
+/* gallery page styles */
+.gallery-intro {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.gallery-item {
+    height: 150px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(74, 55, 40, 0.85);
+    color: #FFF8DC;
+    padding: 10px;
+    text-align: center;
+}
+
+.gallery-overlay p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+.instagram-section {
+    background-color: #8B4513;
+    color: #FFF8DC;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.instagram-section h3 {
+    margin-top: 0;
+    color: #DEB887;
+}
+
+/* contact page styles */
+.contact-info {
+    background-color: #FAEBD7;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-info h3 {
+    color: #8B4513;
+    margin-top: 0;
+}
+
+.contact-details {
+    margin-top: 20px;
+}
+
+.contact-item {
+    padding: 12px 0;
+    border-bottom: 1px solid #D2B48C;
+}
+
+.contact-label {
+    font-weight: bold;
+    color: #8B4513;
+}
+
+.contact-value {
+    margin-left: 10px;
+}
+
+/* map section */
+.map-section {
+    margin-bottom: 20px;
+}
+
+.map-section h3 {
+    color: #8B4513;
+}
+
+.map-placeholder {
+    background-color: #D2B48C;
+    height: 200px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #4A3728;
+    font-size: 1.1em;
+}
+
+.map-placeholder p {
+    margin: 5px 0;
+}
+
+/* contact form */
+.contact-form-section {
+    background-color: #FAEBD7;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-form-section h3 {
+    color: #8B4513;
+    margin-top: 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #8B4513;
+    font-weight: bold;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #D2B48C;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #8B4513;
+    background-color: #FFF;
+}
+
+.submit-btn {
+    background-color: #8B4513;
+    color: #FFF8DC;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1em;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #A0522D;
+}
+
+.form-message {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    display: none;
+}
+
+.form-message.success {
+    display: block;
+    background-color: #90EE90;
+    color: #2E8B57;
+}
+
+/* faq section */
+.faq-section {
+    background-color: #D2B48C;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.faq-section h3 {
+    margin-top: 0;
+    color: #4A3728;
+}
+
+.faq-item {
+    background-color: #FFF8DC;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.faq-item h4 {
+    margin: 0 0 10px 0;
+    color: #8B4513;
+}
+
+.faq-item p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* bottom navigation */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #8B4513;
+    padding: 15px 10px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-btn {
+    background-color: #A0522D;
+    color: #FFF8DC;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.95em;
+    transition: all 0.3s;
+}
+
+.nav-btn:hover {
+    background-color: #CD853F;
+    transform: translateY(-2px);
+}
+
+.nav-btn.active {
+    background-color: #DEB887;
+    color: #4A3728;
+    font-weight: bold;
+}
+
+/* footer */
+.footer {
+    text-align: center;
+    padding: 15px;
+    color: #8B4513;
+    font-size: 0.9em;
+    margin-top: 20px;
+}
+
+/* responsive design - making it work on phones too */
+@media (max-width: 600px) {
+    .main-container {
+        padding: 10px;
+        padding-bottom: 200px;
+    }
+    
+    .header h1 {
+        font-size: 1.6em;
+    }
+    
+    .tagline {
+        font-size: 0.95em;
+    }
+    
+    .content {
+        padding: 15px;
+    }
+    
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .feature-item {
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .team-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .team-member {
+        width: 100%;
+        max-width: 200px;
+    }
+    
+    .nav-btn {
+        padding: 10px 15px;
+        font-size: 0.85em;
+    }
+    
+    .bottom-nav {
+        padding: 10px 5px;
+        gap: 5px;
+    }
+    
+    /* keep backgrounds but remove fixed attachment on mobile */
+    body.menu-page,
+    body.gallery-page,
+    body.about-page {
+        background-attachment: scroll;
+    }
+}
